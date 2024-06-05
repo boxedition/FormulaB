@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.android.safe.args)
 }
 
 android {
@@ -52,6 +53,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
     //Implement CameraX (new way to implement)
     implementation (libs.androidx.camera.core)
     implementation (libs.androidx.camera.camera2)
@@ -63,4 +65,7 @@ dependencies {
 
     //Implement Lottie
     implementation(libs.lottie)
+
+    // Implement card view
+    implementation(libs.androidx.cardview)
 }

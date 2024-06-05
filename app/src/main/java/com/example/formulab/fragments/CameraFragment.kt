@@ -12,11 +12,6 @@ import com.example.formulab.R
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CameraFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CameraFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null

@@ -9,11 +9,19 @@
         android:gravity="center"
         >
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/beer_loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
         <Button
             android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Play"
+            android:text="@string/play"
             android:textStyle="bold"
             android:padding="16dp" />
 
@@ -21,10 +29,9 @@
             android:id="@+id/cameraButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Camera"
+            android:text="@string/camera"
             android:textStyle="bold"
             android:padding="16dp" />
-        />
 
     </LinearLayout>
 </layout>

@@ -1,11 +1,13 @@
 package com.example.formulab.fragments
 
 import android.os.Bundle
+import android.text.Layout.Directions
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.formulab.R
 import com.example.formulab.databinding.FragmentStartBinding
 
@@ -14,11 +16,6 @@ import com.example.formulab.databinding.FragmentStartBinding
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [StartFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StartFragment : Fragment() {
     private lateinit var binding: FragmentStartBinding
 
@@ -27,10 +24,17 @@ class StartFragment : Fragment() {
             R.layout.fragment_start,container,false)
 
         binding.playButton.setOnClickListener {
-            //it.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToCameraFragment())
+            it.findNavController().navigate(StartFragmentDirections.actionStartFragmentToMapFragment())
         }
 
-        setHasOptionsMenu(true)
+        binding.cameraButton.setOnClickListener{
+            it.findNavController().navigate(StartFragmentDirections.actionStartFragmentToCameraFragment())
+        }
+
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 }
