@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.android.safe.args)
 }
 
 android {
@@ -63,4 +64,7 @@ dependencies {
 
     //Implement Lottie
     implementation(libs.lottie)
+
+    // Implement card view
+    implementation (libs.androidx.cardview)
 }
