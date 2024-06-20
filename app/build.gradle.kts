@@ -67,4 +67,7 @@ dependencies {
 
     // Implement card view
     implementation (libs.androidx.cardview)
+
+    //Implement Meadiapipe Task-Vision
+    implementation(libs.tasks.vision)
 }
