@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.android.safe.args)
+    alias(libs.plugins.android.safe.args)
 }
 
 android {
@@ -67,5 +68,5 @@ dependencies {
     implementation(libs.lottie)
 
     // Implement card view
-    implementation(libs.androidx.cardview)
+    implementation (libs.androidx.cardview)
 }
